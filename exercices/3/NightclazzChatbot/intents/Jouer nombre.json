@@ -1,0 +1,38 @@
+{
+  "id": "d861e740-4746-41f5-8f4f-42542c4f2a90",
+  "name": "Jouer nombre",
+  "auto": true,
+  "contexts": [
+    "nombre_secret"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "3b8e9f28-a7e2-4afe-8736-a93a02913d6a",
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542290432,
+  "fallbackIntent": false,
+  "events": []
+}

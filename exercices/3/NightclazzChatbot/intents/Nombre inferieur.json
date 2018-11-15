@@ -1,0 +1,28 @@
+{
+  "id": "b1fa4810-0c63-46d0-bce3-9d8183bc5fa9",
+  "name": "Nombre inferieur",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542292907,
+  "fallbackIntent": false,
+  "events": []
+}
