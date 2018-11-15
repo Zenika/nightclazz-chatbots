@@ -1,0 +1,36 @@
+{
+  "id": "7dfea9ec-bd72-4534-b5f5-bd564457dd64",
+  "name": "Jouer",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "81c39f2d-7a5c-43a3-a4e2-bcfa229f6a07",
+          "dataType": "@Difficulte",
+          "name": "Difficulte",
+          "value": "$Difficulte",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542293832,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "6512d3aa-be32-47be-acec-32aee6d0e1af",
+    "data": [
+      {
+        "text": "Jouer en mode ",
+        "userDefined": false
+      },
+      {
+        "text": "facile",
+        "alias": "Difficulte",
+        "meta": "@Difficulte",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542293832
+  },
+  {
+    "id": "92e55fbf-978d-4259-a1f4-20791f6651f2",
+    "data": [
+      {
+        "text": "Jouer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1542289989
+  }
+]

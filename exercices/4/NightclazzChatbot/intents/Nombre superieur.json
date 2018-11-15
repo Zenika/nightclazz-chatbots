@@ -1,0 +1,28 @@
+{
+  "id": "284a0e19-19c4-4e9c-ba4a-1964911292d2",
+  "name": "Nombre superieur",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1542292897,
+  "fallbackIntent": false,
+  "events": []
+}

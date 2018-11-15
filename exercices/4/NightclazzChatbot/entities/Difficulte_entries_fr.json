@@ -1,0 +1,29 @@
+[
+  {
+    "value": "facile",
+    "synonyms": [
+      "facile",
+      "easy",
+      "ez",
+      "simple"
+    ]
+  },
+  {
+    "value": "normal",
+    "synonyms": [
+      "normal",
+      "casual",
+      "casu",
+      "recommandé"
+    ]
+  },
+  {
+    "value": "difficile",
+    "synonyms": [
+      "difficile",
+      "hardcore",
+      "pgm",
+      "hard"
+    ]
+  }
+]
