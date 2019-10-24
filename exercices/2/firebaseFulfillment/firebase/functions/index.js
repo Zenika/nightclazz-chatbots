@@ -23,18 +23,18 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
   
   function jouer(agent) {
-    agent.setContext({
+    agent.context.set({
       name: 'nombre_secret',
       lifespan: 6,
       parameters: {
         valeur: randomInt(0, 10),
       },
     })
-    agent.add('J\'ai choisi un nombre entre 0 et 100... C\'est à toi !')
+    agent.add('J\'ai choisi un nombre entre 0 et 10... C\'est à toi !')
   }
   
   function jouer_nombre(agent) {
-    const { parameters, lifespan } = agent.getContext('nombre_secret')
+    const { parameters, lifespan } = agent.context.get('nombre_secret')
 
     const nombre_secret = parameters.valeur
     const nombre_utilisateur = agent.parameters.number
@@ -42,7 +42,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const derniere_tentative = lifespan === 1
 
     if (nombre_utilisateur === nombre_secret) {
-      agent.clearContext('nombre_secret')
+      agent.context.delete('nombre_secret')
       agent.add('Tu as gagné !')
     }
     else if (derniere_tentative) {
