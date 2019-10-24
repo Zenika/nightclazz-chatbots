@@ -16,8 +16,8 @@
     "actions-on-google": "^2.2.0",
     "firebase-admin": "^5.13.1",
     "firebase-functions": "^2.0.2",
-    "dialogflow": "^0.6.0",
-    "dialogflow-fulfillment": "^0.5.0",
+    "dialogflow": "^0.12.2",
+    "dialogflow-fulfillment": "^0.6.1",
     "random-int": "^1.0.0"
   }
 }
