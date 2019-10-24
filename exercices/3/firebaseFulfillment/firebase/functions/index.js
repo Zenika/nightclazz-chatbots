@@ -27,7 +27,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
   
   function jouer(agent) {
-    agent.setContext({
+    agent.context.set({
       name: 'nombre_secret',
       lifespan: 6,
       parameters: {
@@ -38,7 +38,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
   
   function jouer_nombre(agent) {
-    const { parameters, lifespan } = agent.getContext('nombre_secret')
+    const { parameters, lifespan } = agent.context.get('nombre_secret')
 
     const nombre_secret = parameters.valeur
     const nombre_utilisateur = agent.parameters.number
@@ -46,7 +46,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const derniere_tentative = lifespan === 1
 
     if (nombre_utilisateur === nombre_secret) {
-      agent.clearContext('nombre_secret')
+      agent.context.delete('nombre_secret')
       agent.add('Tu as gagné !')
     }
     else if (derniere_tentative) {
@@ -65,7 +65,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const nombre = randomInt(min, max)
     agent.add(`Est-ce que c'est ${nombre} ?`)
 
-    agent.setContext({
+    agent.context.set({
       name: 'nombre_choisi',
       lifespan: 5,
       parameters: {
@@ -77,18 +77,19 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
 
   function choisir_nombre_superieur(agent) {
-    const { nombre, max } = agent.getContext('nombre_choisi').parameters
+    const { nombre, max } = agent.context.get('nombre_choisi').parameters
     choisir_nombre(agent, nombre + 1, max)
   }
 
   function choisir_nombre_inferieur(agent) {
-    const { nombre, min } = agent.getContext('nombre_choisi').parameters
+    const { nombre, min } = agent.context.get('nombre_choisi').parameters
     choisir_nombre(agent, min, nombre - 1)
   }
 
   let intentMap = new Map();
   intentMap.set('Default Welcome Intent', welcome);
   intentMap.set('Default Fallback Intent', fallback);
+  intentMap.set(null, fallback);
   intentMap.set('Jouer', jouer);
   intentMap.set('Jouer nombre', jouer_nombre);
   intentMap.set('Deviner', deviner);
